@@ -6,10 +6,11 @@ import android.os.Bundle;
 import com.aheadle.camerapreview.R;
 
 public class FaceActivity extends AppCompatActivity {
-
+    public static  FaceActivity faceActivity;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_face);
+        faceActivity = this;
     }
 }

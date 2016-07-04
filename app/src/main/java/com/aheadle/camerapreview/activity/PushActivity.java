@@ -11,6 +11,9 @@ import com.aheadle.camerapreview.R;
 
 import java.io.IOException;
 
+/**
+ * 简单的一个预览打开摄像头
+ */
 public class PushActivity extends AppCompatActivity {
     private SurfaceView mSurfaceView;
     private SurfaceHolder mSurfaceHolder;
@@ -94,4 +97,5 @@ public class PushActivity extends AppCompatActivity {
             mCamera = null;
         }
     }
+
 }
