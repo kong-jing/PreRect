@@ -5,6 +5,9 @@ import android.os.Bundle;
 
 import com.aheadle.camerapreview.R;
 
+/**
+ * 人脸检测的预览界面
+ */
 public class FaceActivity extends AppCompatActivity {
     public static  FaceActivity faceActivity;
     @Override

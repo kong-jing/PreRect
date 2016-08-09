@@ -1,15 +1,19 @@
 package com.aheadle.camerapreview.view;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.PixelFormat;
 import android.hardware.Camera;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.Surface;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 
 import com.aheadle.camerapreview.activity.FaceActivity;
 import com.aheadle.camerapreview.activity.PushActivity;
+import com.aheadle.camerapreview.util.GoogleGetFace;
 
 import java.io.IOException;
 
@@ -17,7 +21,7 @@ import java.io.IOException;
  * Created by aheadle on 16/6/30.
  * faceactivity中使用的cameraSurfaceview预览界面
  */
-public class CameraSurfaceView extends SurfaceView implements SurfaceHolder.Callback {
+public class CameraSurfaceView extends SurfaceView implements SurfaceHolder.Callback,Camera.PreviewCallback {
     private SurfaceView mSurfaceView;
     private SurfaceHolder mSurfaceHolder;
     private Context mContext;
@@ -63,9 +67,11 @@ public class CameraSurfaceView extends SurfaceView implements SurfaceHolder.Call
 
     //初始化预览界面
     private void doOpenCamera() {
+
         mCamera = Camera.open(Camera.CameraInfo.CAMERA_FACING_FRONT);
         try {
             mCamera.setPreviewDisplay(mSurfaceHolder);
+            mCamera.setPreviewCallback(CameraSurfaceView.this);//设置视频帧回调
         }catch (IOException e){
             e.printStackTrace();
         }
@@ -113,4 +119,13 @@ public class CameraSurfaceView extends SurfaceView implements SurfaceHolder.Call
         }
     }
 
+    /**
+     * 摄像头获取的一帧图片，回调给谷歌人脸识别算法处理
+     * @param data
+     * @param camera
+     */
+    @Override
+    public void onPreviewFrame(byte[] data, Camera camera) {
+
+    }
 }
