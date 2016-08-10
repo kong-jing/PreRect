@@ -1,5 +1,6 @@
 # CameraPreview
 android CameraPreview ,google facedetector.Use facedetector draw a face frame.
+
 使用谷歌人脸检测算法在打开摄像头预览后画出当前镜头检测到的人脸框。
 
 #错误解决
