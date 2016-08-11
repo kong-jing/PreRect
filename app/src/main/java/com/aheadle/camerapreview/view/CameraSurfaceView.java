@@ -4,7 +4,10 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.PixelFormat;
+import android.graphics.Rect;
+import android.graphics.YuvImage;
 import android.hardware.Camera;
+import android.os.AsyncTask;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.Surface;
@@ -15,6 +18,7 @@ import com.aheadle.camerapreview.activity.FaceActivity;
 import com.aheadle.camerapreview.activity.PushActivity;
 import com.aheadle.camerapreview.util.GoogleGetFace;
 
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 
 /**
@@ -125,7 +129,31 @@ public class CameraSurfaceView extends SurfaceView implements SurfaceHolder.Call
      * @param camera
      */
     @Override
-    public void onPreviewFrame(byte[] data, Camera camera) {
+    public void onPreviewFrame(final byte[] data, final Camera camera) {
+
+        new AsyncTask<Void,Void,Void>(){
+
+            @Override
+            protected Void doInBackground(Void... params) {
+
+                Camera.Parameters parameters = camera.getParameters();
+                int width = parameters.getPreviewSize().width;
+                int height = parameters.getPreviewSize().height;
+                YuvImage yuv = new YuvImage(data, parameters.getPreviewFormat(), width, height, null);
+
+                ByteArrayOutputStream out = new ByteArrayOutputStream();
+                yuv.compressToJpeg(new Rect(0, 0, width, height), 50, out);
+
+                byte[] bytes = out.toByteArray();
+                final Bitmap bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
+                float i = GoogleGetFace.getInstance().drawFace(bitmap);
+                Log.e("TAG","眼睛距离   "+i);
+                return null;
+            }
+        }.execute();
+
+
+
 
     }
 }
