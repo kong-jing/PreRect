@@ -1,4 +1,4 @@
-package com.aheadle.camerapreview;
+package com.knjin.camerapreview;
 
 import org.junit.Test;
 

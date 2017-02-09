@@ -1,4 +1,4 @@
-package com.aheadle.camerapreview.view;
+package com.knjin.prerect.view;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -14,9 +14,8 @@ import android.view.Surface;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 
-import com.aheadle.camerapreview.activity.FaceActivity;
-import com.aheadle.camerapreview.activity.PushActivity;
-import com.aheadle.camerapreview.util.GoogleGetFace;
+import com.knjin.prerect.activity.FaceActivity;
+import com.knjin.prerect.util.GoogleGetFace;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;

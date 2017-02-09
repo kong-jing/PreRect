@@ -1,4 +1,4 @@
-package com.aheadle.camerapreview.util;
+package com.knjin.prerect.util;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -6,7 +6,6 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.PointF;
-import android.graphics.Rect;
 import android.media.FaceDetector;
 import android.util.Log;
 

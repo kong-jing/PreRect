@@ -1,4 +1,4 @@
-package com.aheadle.camerapreview;
+package com.knjin.camerapreview;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

@@ -1,4 +1,4 @@
-package com.aheadle.camerapreview.activity;
+package com.knjin.prerect.activity;
 
 import android.hardware.Camera;
 import android.support.v7.app.AppCompatActivity;
@@ -7,7 +7,7 @@ import android.view.Surface;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 
-import com.aheadle.camerapreview.R;
+import com.knjin.camerapreview.R;
 
 import java.io.IOException;
 
@@ -48,6 +48,8 @@ public class PushActivity extends AppCompatActivity {
     //初始化预览界面
     private void doOpenCamera() {
         mCamera = Camera.open(Camera.CameraInfo.CAMERA_FACING_FRONT);
+        Camera.Parameters parameters = mCamera.getParameters();
+        Camera.Size size = (Camera.Size) parameters.getSupportedPictureSizes();
         try {
             mCamera.setPreviewDisplay(mSurfaceHolder);
         }catch (IOException e){

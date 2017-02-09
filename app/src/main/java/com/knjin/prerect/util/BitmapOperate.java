@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.aheadle.camerapreview.util;
+package com.knjin.prerect.util;
 
 import android.graphics.Bitmap;
 import android.graphics.Canvas;

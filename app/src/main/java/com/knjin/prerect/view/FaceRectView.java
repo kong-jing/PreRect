@@ -1,4 +1,4 @@
-package com.aheadle.camerapreview.view;
+package com.knjin.prerect.view;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -7,7 +7,7 @@ import android.graphics.Paint;
 import android.util.AttributeSet;
 import android.view.View;
 
-import com.aheadle.camerapreview.model.Face;
+import com.knjin.prerect.model.Face;
 
 /**
  * Created by Jing on 16/8/5.

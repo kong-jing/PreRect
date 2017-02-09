@@ -3,8 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.aheadle.camerapreview.activity.FaceActivity">
-    <com.aheadle.camerapreview.view.CameraSurfaceView
+    tools:context="com.knjin.prerect.activity.FaceActivity">
+    <com.knjin.prerect.view.CameraSurfaceView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         />

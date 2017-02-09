@@ -1,4 +1,4 @@
-package com.aheadle.camerapreview.util;
+package com.knjin.prerect.util;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;

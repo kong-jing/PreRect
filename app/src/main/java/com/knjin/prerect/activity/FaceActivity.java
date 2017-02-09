@@ -1,9 +1,9 @@
-package com.aheadle.camerapreview.activity;
+package com.knjin.prerect.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.aheadle.camerapreview.R;
+import com.knjin.camerapreview.R;
 
 /**
  * 人脸检测的预览界面

@@ -1,4 +1,4 @@
-package com.aheadle.camerapreview.model;
+package com.knjin.prerect.model;
 
 import android.graphics.Rect;
 
