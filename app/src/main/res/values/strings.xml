@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">CameraPreview</string>
+    <string name="simple_preview">简单预览</string>
 </resources>

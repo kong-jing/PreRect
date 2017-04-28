@@ -15,6 +15,7 @@ import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 
 import com.knjin.prerect.activity.FaceActivity;
+import com.knjin.prerect.camera.CameraInterface;
 import com.knjin.prerect.util.GoogleGetFace;
 
 import java.io.ByteArrayOutputStream;
@@ -24,135 +25,45 @@ import java.io.IOException;
  * Created by aheadle on 16/6/30.
  * faceactivity中使用的cameraSurfaceview预览界面
  */
-public class CameraSurfaceView extends SurfaceView implements SurfaceHolder.Callback,Camera.PreviewCallback {
-    private SurfaceView mSurfaceView;
-    private SurfaceHolder mSurfaceHolder;
-    private Context mContext;
-    private Camera mCamera;
-
-    public CameraSurfaceView(Context context) {
-        super(context);
-        init(context);
-    }
-
+public class CameraSurfaceView extends SurfaceView implements SurfaceHolder.Callback {
+    private static final String TAG = "yanzi";
+    CameraInterface mCameraInterface;
+    Context mContext;
+    SurfaceHolder mSurfaceHolder;
     public CameraSurfaceView(Context context, AttributeSet attrs) {
         super(context, attrs);
-        init(context);
-    }
-
-    public CameraSurfaceView(Context context, AttributeSet attrs, int defStyleAttr) {
-        super(context, attrs, defStyleAttr);
-        init(context);
-    }
-
-    private void init(Context context) {
+        // TODO Auto-generated constructor stub
         mContext = context;
         mSurfaceHolder = getHolder();
-        mSurfaceHolder.setFormat(PixelFormat.TRANSPARENT);
+        mSurfaceHolder.setFormat(PixelFormat.TRANSPARENT);//translucent°ëÍ¸Ã÷ transparentÍ¸Ã÷
         mSurfaceHolder.setType(SurfaceHolder.SURFACE_TYPE_PUSH_BUFFERS);
         mSurfaceHolder.addCallback(this);
     }
 
     @Override
     public void surfaceCreated(SurfaceHolder holder) {
-        doOpenCamera();
+        // TODO Auto-generated method stub
+        Log.i(TAG, "surfaceCreated...");
+        CameraInterface.getInstance().doOpenCamera(null, Camera.CameraInfo.CAMERA_FACING_BACK);
     }
 
     @Override
-    public void surfaceChanged(SurfaceHolder holder, int format, int width, int height) {
-
+    public void surfaceChanged(SurfaceHolder holder, int format, int width,
+                               int height) {
+        // TODO Auto-generated method stub
+        Log.i(TAG, "surfaceChanged...");
+        CameraInterface.getInstance().doStartPreview(mSurfaceHolder, 1.333f);
     }
 
     @Override
     public void surfaceDestroyed(SurfaceHolder holder) {
-        releaseCamera();
+        // TODO Auto-generated method stub
+        Log.i(TAG, "surfaceDestroyed...");
+        CameraInterface.getInstance().doStopCamera();
+    }
+    public SurfaceHolder getSurfaceHolder(){
+        return mSurfaceHolder;
     }
 
-    //初始化预览界面
-    private void doOpenCamera() {
-
-        mCamera = Camera.open(Camera.CameraInfo.CAMERA_FACING_FRONT);
-        try {
-            mCamera.setPreviewDisplay(mSurfaceHolder);
-            mCamera.setPreviewCallback(CameraSurfaceView.this);//设置视频帧回调
-        }catch (IOException e){
-            e.printStackTrace();
-        }
-        setCameraDisplayOrientation(FaceActivity.faceActivity, Camera.CameraInfo.CAMERA_FACING_FRONT,mCamera);
-        mCamera.startPreview();
-    }
-
-    //设置相机的角度与方向
-    private void setCameraDisplayOrientation(FaceActivity faceActivity, int cameraId, Camera mCamera) {
-        Camera.CameraInfo info = new Camera.CameraInfo();
-        Camera.getCameraInfo(cameraId,info);
-        int rotation = faceActivity.getWindowManager().getDefaultDisplay().getRotation();
-        int degrees = 0;
-        switch (rotation){
-            case Surface.ROTATION_0:
-                degrees = 0;
-                break;
-            case Surface.ROTATION_90:
-                degrees = 90;
-                break;
-            case Surface.ROTATION_180:
-                degrees = 180;
-                break;
-            case Surface.ROTATION_270:
-                degrees = 270;
-                break;
-            default:break;
-        }
-        int result ;
-        if (info.facing == Camera.CameraInfo.CAMERA_FACING_FRONT){
-            result = (info.orientation + degrees) % 360;
-            result = (360 -result) % 360;
-        } else {
-            result = (info.orientation - degrees+360) % 360;
-        }
-        mCamera.setDisplayOrientation(result);
-    }
-
-    //关闭释放相机
-    private void releaseCamera() {
-        if (null != mCamera){
-            mCamera.stopPreview();
-            mCamera.release();
-            mCamera = null;
-        }
-    }
-
-    /**
-     * 摄像头获取的一帧图片，回调给谷歌人脸识别算法处理
-     * @param data
-     * @param camera
-     */
-    @Override
-    public void onPreviewFrame(final byte[] data, final Camera camera) {
-
-        new AsyncTask<Void,Void,Void>(){
-
-            @Override
-            protected Void doInBackground(Void... params) {
-
-                Camera.Parameters parameters = camera.getParameters();
-                int width = parameters.getPreviewSize().width;
-                int height = parameters.getPreviewSize().height;
-                YuvImage yuv = new YuvImage(data, parameters.getPreviewFormat(), width, height, null);
-
-                ByteArrayOutputStream out = new ByteArrayOutputStream();
-                yuv.compressToJpeg(new Rect(0, 0, width, height), 50, out);
-
-                byte[] bytes = out.toByteArray();
-                final Bitmap bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
-                float i = GoogleGetFace.getInstance().drawFace(bitmap);
-                Log.e("TAG","眼睛距离   "+i);
-                return null;
-            }
-        }.execute();
-
-
-
-
-    }
 }
+

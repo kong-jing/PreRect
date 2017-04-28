@@ -6,15 +6,11 @@
     android:orientation="vertical"
     tools:context="com.knjin.prerect.activity.MainActivity">
 
-    <Button
-        android:id="@+id/btn_preview"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="简单预览" />
+    <!---->
 
     <Button
         android:id="@+id/btn_detect"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="人脸检测" />
+        android:text="@string/simple_preview" />
 </LinearLayout>

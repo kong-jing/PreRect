@@ -5,7 +5,13 @@
     android:layout_height="match_parent"
     tools:context="com.knjin.prerect.activity.FaceActivity">
     <com.knjin.prerect.view.CameraSurfaceView
+        android:id="@+id/preview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         />
+    <!--<com.knjin.prerect.model.FaceView-->
+        <!--android:id="@+id/faceview"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--/>-->
 </RelativeLayout>

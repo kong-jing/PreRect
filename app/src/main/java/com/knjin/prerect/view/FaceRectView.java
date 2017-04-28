@@ -7,7 +7,8 @@ import android.graphics.Paint;
 import android.util.AttributeSet;
 import android.view.View;
 
-import com.knjin.prerect.model.Face;
+import com.knjin.prerect.model.FaceInfo;
+
 
 /**
  * Created by Jing on 16/8/5.
@@ -17,7 +18,7 @@ public class FaceRectView extends View {
     Context mContext;
     private Paint mLinePaint;
     Paint textPaint;
-    private Face[] mFaces;
+    private FaceInfo[] mFaces;
 
     public FaceRectView(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -25,7 +26,7 @@ public class FaceRectView extends View {
         this.initPaint();
     }
 
-    public void setFace(Face[] faces) {
+    public void setFace(FaceInfo[] faces) {
         this.mFaces = faces;
         this.invalidate();
     }

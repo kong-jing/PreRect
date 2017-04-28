@@ -27,6 +27,7 @@
         </activity>
         <activity android:name="com.knjin.prerect.activity.PushActivity" />
         <activity android:name="com.knjin.prerect.activity.FaceActivity"></activity>
+        <activity android:name="com.knjin.prerect.activity.CameraActivity"/>
     </application>
 
 </manifest>
