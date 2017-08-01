@@ -1,5 +1,6 @@
-package com.knjin.prerect.camera;
+package com.jing.prerect.camera;
 
+import com.jing.prerect.util.FileUtil;
 import java.io.IOException;
 import java.util.List;
 
@@ -14,9 +15,8 @@ import android.hardware.Camera.Size;
 import android.util.Log;
 import android.view.SurfaceHolder;
 
-import com.knjin.prerect.util.CamParaUtil;
-import com.knjin.prerect.util.FileUtil;
-import com.knjin.prerect.util.ImageUtil;
+import com.jing.prerect.util.CamParaUtil;
+import com.jing.prerect.util.ImageUtil;
 
 public class CameraInterface {
 	private static final String TAG = "YanZi";

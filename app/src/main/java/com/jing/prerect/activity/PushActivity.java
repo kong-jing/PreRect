@@ -1,4 +1,4 @@
-package com.knjin.prerect.activity;
+package com.jing.prerect.activity;
 
 import android.hardware.Camera;
 import android.support.v7.app.AppCompatActivity;
@@ -7,7 +7,7 @@ import android.view.Surface;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 
-import com.knjin.camerapreview.R;
+import com.jing.camerapreview.R;
 
 import java.io.IOException;
 

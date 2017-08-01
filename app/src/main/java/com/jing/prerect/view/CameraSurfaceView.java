@@ -1,32 +1,21 @@
-package com.knjin.prerect.view;
+package com.jing.prerect.view;
 
 import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.PixelFormat;
-import android.graphics.Rect;
-import android.graphics.YuvImage;
 import android.hardware.Camera;
-import android.os.AsyncTask;
 import android.util.AttributeSet;
 import android.util.Log;
-import android.view.Surface;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 
-import com.knjin.prerect.activity.FaceActivity;
-import com.knjin.prerect.camera.CameraInterface;
-import com.knjin.prerect.util.GoogleGetFace;
-
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
+import com.jing.prerect.camera.CameraInterface;
 
 /**
- * Created by aheadle on 16/6/30.
+ * Created by jing on 16/6/30.
  * faceactivity中使用的cameraSurfaceview预览界面
  */
 public class CameraSurfaceView extends SurfaceView implements SurfaceHolder.Callback {
-    private static final String TAG = "yanzi";
+    private static final String TAG = "CameraSurfaceView";
     CameraInterface mCameraInterface;
     Context mContext;
     SurfaceHolder mSurfaceHolder;

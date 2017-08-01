@@ -1,4 +1,4 @@
-package com.knjin.prerect.detect;
+package com.jing.prerect.detect;
 
 import android.content.Context;
 import android.hardware.Camera;
@@ -6,7 +6,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
 
-import com.knjin.prerect.util.EventUtil;
+import com.jing.prerect.util.EventUtil;
 
 public class GoogleFaceDetect implements Camera.FaceDetectionListener {
 	private static final String TAG = "YanZi";

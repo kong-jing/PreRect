@@ -1,4 +1,4 @@
-package com.knjin.prerect.activity;
+package com.jing.prerect.activity;
 
 import android.app.Activity;
 import android.hardware.Camera;
@@ -11,12 +11,12 @@ import android.support.annotation.RequiresApi;
 import android.view.View;
 import android.widget.ImageButton;
 
-import com.knjin.camerapreview.R;
-import com.knjin.prerect.camera.CameraInterface;
-import com.knjin.prerect.detect.GoogleFaceDetect;
-import com.knjin.prerect.model.FaceView;
-import com.knjin.prerect.util.EventUtil;
-import com.knjin.prerect.view.CameraSurfaceView;
+import com.jing.prerect.camera.CameraInterface;
+import com.jing.prerect.detect.GoogleFaceDetect;
+import com.jing.prerect.util.EventUtil;
+import com.jing.camerapreview.R;
+import com.jing.prerect.model.FaceView;
+import com.jing.prerect.view.CameraSurfaceView;
 
 /**
  * Created by knjin on 17/4/28.

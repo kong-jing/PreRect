@@ -1,25 +1,18 @@
-package com.knjin.prerect.model;
+package com.jing.prerect.model;
 
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Matrix;
 import android.graphics.Paint;
-import android.graphics.Rect;
 import android.graphics.RectF;
 import android.graphics.drawable.Drawable;
 import android.hardware.Camera;
-import android.icu.text.DecimalFormat;
-import android.os.Build;
-import android.support.annotation.Nullable;
-import android.support.annotation.RequiresApi;
 import android.util.AttributeSet;
-import android.view.View;
-import android.widget.ImageView;
 
-import com.knjin.camerapreview.R;
-import com.knjin.prerect.camera.CameraInterface;
-import com.knjin.prerect.util.Util;
+import com.jing.prerect.camera.CameraInterface;
+import com.jing.prerect.util.Util;
+import com.jing.camerapreview.R;
 
 /**
  * Created by Jing on 16/8/5.

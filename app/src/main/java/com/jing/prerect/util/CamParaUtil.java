@@ -1,4 +1,4 @@
-package com.knjin.prerect.util;
+package com.jing.prerect.util;
 
 import java.util.Collections;
 import java.util.Comparator;

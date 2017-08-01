@@ -6,12 +6,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" >
 
-        <com.knjin.prerect.view.CameraSurfaceView
+        <com.jing.prerect.view.CameraSurfaceView
             android:id="@+id/camera_surfaceview"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
-        <com.knjin.prerect.model.FaceView
+        <com.jing.prerect.model.FaceView
             android:id="@+id/face_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />

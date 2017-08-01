@@ -1,4 +1,4 @@
-package com.knjin.prerect.util;
+package com.jing.prerect.util;
 
 import java.io.BufferedOutputStream;
 import java.io.File;

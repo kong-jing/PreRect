@@ -1,4 +1,4 @@
-package com.knjin.prerect.view;
+package com.jing.prerect.view;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -7,7 +7,7 @@ import android.graphics.Paint;
 import android.util.AttributeSet;
 import android.view.View;
 
-import com.knjin.prerect.model.FaceInfo;
+import com.jing.prerect.model.FaceInfo;
 
 
 /**
