@@ -4,14 +4,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.jing.prerect.activity.FaceActivity">
-    <com.jing.prerect.view.CameraSurfaceView
+    <com.jing.prerect.camera.CameraPreview
         android:id="@+id/preview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         />
-    <!--<FaceView-->
-        <!--android:id="@+id/faceview"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="match_parent"-->
-        <!--/>-->
+    <com.jing.prerect.view.FaceRectView
+        android:id="@+id/faceview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
 </RelativeLayout>

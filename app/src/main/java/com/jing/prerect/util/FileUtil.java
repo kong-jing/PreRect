@@ -15,7 +15,7 @@ public class FileUtil {
 	private static   String storagePath = "";
 	private static final String DST_FOLDER_NAME = "PlayCamera";
 
-	/**��ʼ������·��
+	/**
 	 * @return
 	 */
 	private static String initPath(){
@@ -29,7 +29,7 @@ public class FileUtil {
 		return storagePath;
 	}
 
-	/**����Bitmap��sdcard
+	/**
 	 * @param b
 	 */
 	public static void saveBitmap(Bitmap b){
