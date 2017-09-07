@@ -25,7 +25,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.jing.prerect.activity.PushActivity" />
         <activity android:name="com.jing.prerect.activity.FaceActivity"></activity>
     </application>
 

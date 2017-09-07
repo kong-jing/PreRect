@@ -29,7 +29,7 @@ public class FaceActivity extends AppCompatActivity {
 
     @Override protected void onResume() {
         super.onResume();
-        mCameraPreview.cwStartCamera();
+        mCameraPreview.StartCamera();
     }
 
     private void initView() {
@@ -47,11 +47,11 @@ public class FaceActivity extends AppCompatActivity {
             mCameraPreview.setCaremaId(Camera.CameraInfo.CAMERA_FACING_BACK);
         }
 
-        
+
     }
 
     @Override protected void onStop() {
         super.onStop();
-        mCameraPreview.cwStopCamera();
+        mCameraPreview.StopCamera();
     }
 }

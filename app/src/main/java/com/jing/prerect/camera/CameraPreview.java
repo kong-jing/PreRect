@@ -19,6 +19,7 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
 	private static final String TAG = "CameraPreview";
 
 	private Camera mCamera;
+	CameraConfigurationManager mCameraConfigurationManager;//配置摄像头
 
 	private int orientation;
 	int imageAngle;
@@ -81,7 +82,7 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
 	public void setCamera(Camera camera) {
 		mCamera = camera;
 		if (mCamera != null) {
-
+			mCameraConfigurationManager = new CameraConfigurationManager(getContext());
 			getHolder().addCallback(this);
 			if (mPreviewing) {
 				requestLayout();
@@ -165,7 +166,7 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
 	/**
 	 * 打开摄像头开始预览，但是并未开始识别
 	 */
-	public void cwStartCamera() {
+	public void StartCamera() {
 		if (mCamera != null) {
 			return;
 		}
@@ -182,7 +183,7 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
 	/**
 	 * 关闭摄像头预览，并且隐藏扫描框
 	 */
-	public void cwStopCamera() {
+	public void StopCamera() {
 		if (mCamera != null) {
 			stopCameraPreview();
 
@@ -212,13 +213,13 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
 	 * 切换摄像头
 	 */
 	public int switchCarema() {
-		cwStopCamera();
+		StopCamera();
 		if (caremaId == Camera.CameraInfo.CAMERA_FACING_FRONT) {
 			caremaId = Camera.CameraInfo.CAMERA_FACING_BACK;
 		} else {
 			caremaId = Camera.CameraInfo.CAMERA_FACING_FRONT;
 		}
-		cwStartCamera();
+		StartCamera();
 		return caremaId;
 	}
 
