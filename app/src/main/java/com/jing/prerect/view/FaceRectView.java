@@ -19,11 +19,21 @@ public class FaceRectView extends View {
     private Paint mLinePaint;
     Paint textPaint;
     private FaceInfo[] mFaces;
-
+    int surfaceW, surfaceH;
+    int frameWidth = 480, frameHight = 640;
+    float scale;
     public FaceRectView(Context context, AttributeSet attrs) {
         super(context, attrs);
         this.mContext = context;
         this.initPaint();
+    }
+
+    public void setSurface(int surfaceW, int surfaceH,int frameWidth,int frameHight){
+        this.surfaceW = surfaceW;
+        this.surfaceH = surfaceH;
+        this.frameWidth = frameWidth;
+        this.frameHight = frameHight;
+        scale = surfaceW * 1f / frameWidth;
     }
 
     public void setFace(FaceInfo[] faces) {
