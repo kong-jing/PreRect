@@ -1,4 +1,4 @@
-[![Build Status](https://www.travis-ci.org/kong-jing/PreRect.svg?branch=master)](https://www.travis-ci.org/kong-jing/PreRect)
+[![Build Status](https://www.travis-ci.org/kong-jing/PreRect.svg?branch=master)](https://www.travis-ci.org/kong-jing/PreRect) [![API](https://img.shields.io/badge/API-14%2B-green.svg?style=flat)](https://android-arsenal.com/api?level=14)
 # CameraPreview
 android CameraPreview ,google facedetector.Use facedetector draw a face frame.
 
