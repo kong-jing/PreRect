@@ -1,4 +1,4 @@
-[![](https://travis-ci.org/kong-jing/Alamofire.svg?branch=master)](https://travis-ci.org/kong-jing/PreRect)
+[![Build Status](https://www.travis-ci.org/kong-jing/PreRect.svg?branch=master)](https://www.travis-ci.org/kong-jing/PreRect)
 # CameraPreview
 android CameraPreview ,google facedetector.Use facedetector draw a face frame.
 
