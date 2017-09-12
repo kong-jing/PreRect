@@ -1,4 +1,4 @@
-package com.jing.prerect.util;
+package com.kong.prerect.util;
 
 import android.content.Context;
 import android.graphics.Point;

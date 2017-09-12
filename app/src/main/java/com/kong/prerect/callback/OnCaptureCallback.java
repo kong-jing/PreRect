@@ -1,4 +1,4 @@
-package com.jing.prerect.callback;
+package com.kong.prerect.callback;
 
 public interface OnCaptureCallback {
 

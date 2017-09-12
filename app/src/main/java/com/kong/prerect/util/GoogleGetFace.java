@@ -1,4 +1,4 @@
-package com.jing.prerect.util;
+package com.kong.prerect.util;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;

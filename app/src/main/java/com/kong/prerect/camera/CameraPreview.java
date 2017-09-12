@@ -1,4 +1,4 @@
-package com.jing.prerect.camera;
+package com.kong.prerect.camera;
 
 import android.content.Context;
 import android.content.pm.PackageManager;

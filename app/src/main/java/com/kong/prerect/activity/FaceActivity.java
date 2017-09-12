@@ -1,4 +1,4 @@
-package com.jing.prerect.activity;
+package com.kong.prerect.activity;
 
 import android.content.res.Configuration;
 import android.hardware.Camera;
@@ -7,12 +7,12 @@ import android.os.Bundle;
 
 import android.util.DisplayMetrics;
 import android.widget.RelativeLayout;
-import com.jing.camerapreview.R;
-import com.jing.prerect.camera.CameraPreview;
-import com.jing.prerect.util.CameraUtil;
-import com.jing.prerect.util.DisplayUtil;
-import com.jing.prerect.util.Util;
-import com.jing.prerect.view.FaceRectView;
+import com.kong.camerapreview.R;
+import com.kong.prerect.camera.CameraPreview;
+import com.kong.prerect.util.CameraUtil;
+import com.kong.prerect.util.DisplayUtil;
+import com.kong.prerect.util.Util;
+import com.kong.prerect.view.FaceRectView;
 
 /**
  * 人脸检测的预览界面

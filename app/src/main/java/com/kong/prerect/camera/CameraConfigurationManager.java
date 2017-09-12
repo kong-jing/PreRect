@@ -1,8 +1,7 @@
-package com.jing.prerect.camera;
+package com.kong.prerect.camera;
 
-import android.nfc.Tag;
 import android.util.Log;
-import com.jing.prerect.callback.OnCaptureCallback;
+import com.kong.prerect.callback.OnCaptureCallback;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;

@@ -1,4 +1,4 @@
-package com.jing.prerect.util;
+package com.kong.prerect.util;
 
 public class EventUtil {
 	public static final int UPDATE_FACE_RECT = 0;

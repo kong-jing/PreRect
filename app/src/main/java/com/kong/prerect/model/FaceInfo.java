@@ -1,4 +1,4 @@
-package com.jing.prerect.model;
+package com.kong.prerect.model;
 
 import android.graphics.RectF;
 
