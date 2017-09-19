@@ -96,7 +96,7 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
     mSurfaceCreated = true;
   }
 
-  @Override public void surfaceChanged(SurfaceHolder surfaceHolder, int i, int i2, int i3) {
+  @Override public void surfaceChanged(SurfaceHolder surfaceHolder, int a, int b, int c) {
     if (surfaceHolder.getSurface() == null) {
       return;
     }
@@ -184,7 +184,6 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
   public void StopCamera() {
     if (mCamera != null) {
       stopCameraPreview();
-
       mCamera.release();
       mCamera = null;
     }
@@ -196,13 +195,13 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
       if (Configuration.ORIENTATION_PORTRAIT == orientation) {// 竖屏
         // 水平镜像+旋转90
 
-      } else {// 后置
-        if (Configuration.ORIENTATION_PORTRAIT == orientation) {// 竖屏 旋转90
+      }
+    } else {//后置
+      if (Configuration.ORIENTATION_PORTRAIT == orientation) {// 竖屏 旋转90
 
-        } else {
-          // 横屏不做处理
+      } else {
+        // 横屏不做处理
 
-        }
       }
     }
   }
