@@ -332,6 +332,10 @@ final class CameraConfigurationManager {
 		return tenBestValue;
 	}
 
+	/**
+	 *
+	 * @param parameters
+	 */
 	private void setZoom(Camera.Parameters parameters) {
 		String zoomSupportedString = parameters.get("zoom-supported");
 		if (zoomSupportedString != null

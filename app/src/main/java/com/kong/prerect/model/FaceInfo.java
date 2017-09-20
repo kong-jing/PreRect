@@ -7,16 +7,40 @@ import android.graphics.RectF;
  */
 
 public class FaceInfo {
-    public int x;
-    public int y;
-    public int width;
-    public int height;
-    public int recty;
-    public int rectheight;
-    public int rectwidth;
-    public int rectx;
     public RectF rect;
     public int id;
     public int living;
     public int score;
+
+    public RectF getRect() {
+        return rect;
+    }
+
+    public void setRect(RectF rect) {
+        this.rect = rect;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getLiving() {
+        return living;
+    }
+
+    public void setLiving(int living) {
+        this.living = living;
+    }
+
+    public int getScore() {
+        return score;
+    }
+
+    public void setScore(int score) {
+        this.score = score;
+    }
 }
