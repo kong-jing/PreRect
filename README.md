@@ -9,3 +9,21 @@ android PreRect ,google facedetector.Use facedetector draw a face frame.
 1.Custom view CustomView is not using the 2- or 3-argument View constructors; XML attributes will not work
 
 You need to override the other 2 constructors of View in CustomView:
+
+
+License
+-------
+
+    Copyright 2013 Kong Jing
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
