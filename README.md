@@ -14,7 +14,7 @@ You need to override the other 2 constructors of View in CustomView:
 License
 -------
 
-    Copyright 2013 Kong Jing
+    Copyright 2017 Kong Jing
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
