@@ -47,7 +47,7 @@ public class FaceRectView extends View {
     }
 
     private void initPaint() {
-        float scale = this.getResources().getDisplayMetrics().density;
+        //float scale = this.getResources().getDisplayMetrics().density;
         this.mLinePaint = new Paint(1);
         int color = Color.rgb(98, 212, 68);
         this.mLinePaint.setColor(color);
@@ -66,10 +66,10 @@ public class FaceRectView extends View {
             for(int i = 0; i < len; ++i) {
                 this.textPaint.setColor(Color.BLUE);
                 canvas.drawRect(this.mFaces[i].rect, this.mLinePaint);
-                canvas.drawText(this.mFaces[i].id + "", (float)this.mFaces[i].rect.left, (float)this.mFaces[i].rect.top, this.textPaint);
+                canvas.drawText(this.mFaces[i].id + "", this.mFaces[i].rect.left, this.mFaces[i].rect.top, this.textPaint);
                 String result = String.format("%.2f", new Object[]{Double.valueOf(this.mFaces[i].score)});
-                canvas.drawText(result, (float)this.mFaces[i].rect.right, (float)this.mFaces[i].rect.top, this.textPaint);
-                canvas.drawText(this.mFaces[i].living + "", (float)this.mFaces[i].rect.right, (float)this.mFaces[i].rect.bottom, this.textPaint);
+                canvas.drawText(result, this.mFaces[i].rect.right, this.mFaces[i].rect.top, this.textPaint);
+                canvas.drawText(this.mFaces[i].living + "", this.mFaces[i].rect.right, this.mFaces[i].rect.bottom, this.textPaint);
             }
         }
 
