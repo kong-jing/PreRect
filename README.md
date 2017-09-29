@@ -30,7 +30,7 @@ You need to override the other 2 constructors of View in CustomView:
 
 ```ls | grep video```
 
-```chmod 666 video1```
+```chmod 777 video1```
 
 
 
