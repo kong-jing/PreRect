@@ -6,11 +6,26 @@ android PreRect ,google facedetector.Use facedetector draw a face frame.
 
 使用谷歌人脸检测算法在打开摄像头预览后画出当前镜头检测到的人脸框。
 
-#错误解决
+# 错误解决
 
 1.Custom view CustomView is not using the 2- or 3-argument View constructors; XML attributes will not work
 
 You need to override the other 2 constructors of View in CustomView:
+
+## 双摄像头节点，热插拔，摄像头节点查找(Dual cameras, Hot usb)
+
+```adb shell```
+
+```cd dev```
+
+```ls```
+
+```ls | grep video```
+
+```chmod 666 video1```
+
+
+
 
 
 License
