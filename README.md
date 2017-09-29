@@ -12,7 +12,13 @@ android PreRect ,google facedetector.Use facedetector draw a face frame.
 
 You need to override the other 2 constructors of View in CustomView:
 
-## 双摄像头节点，热插拔，摄像头节点查找(Dual cameras, Hot usb)
+**双摄像头节点，热插拔，摄像头节点查找(Dual cameras, Hot usb)**
+
+```sudo chmod 600 ××× （只有所有者有读和写的权限）
+sudo chmod 644 ××× （所有者有读和写的权限，组用户只有读的权限）
+sudo chmod 700 ××× （只有所有者有读和写以及执行的权限）
+sudo chmod 666 ××× （每个人都有读和写的权限）
+sudo chmod 777 ××× （每个人都有读和写以及执行的权限）```
 
 ```adb shell```
 
