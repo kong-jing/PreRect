@@ -58,7 +58,6 @@ public class FaceActivity extends AppCompatActivity {
             mCameraPreview.setCaremaId(Camera.CameraInfo.CAMERA_FACING_BACK);
         }
 
-
         if(orientation == Configuration.ORIENTATION_LANDSCAPE){//横屏
             //屏幕方向
             int previewH = height;

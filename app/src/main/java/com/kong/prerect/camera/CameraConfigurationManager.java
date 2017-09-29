@@ -85,10 +85,7 @@ final class CameraConfigurationManager {
 	}
 
 	/**
-	 * 
-	 * setCameraParametersForPreviewCallBack:设置参数(用于实时预览数据回掉). <br/>
-	 * 
-	 * @author:284891377 Date: 2016年7月11日 下午2:53:05
+	 * setCameraParametersForPreviewCallBack:设置参数(用于实时预览数据回掉).
 	 * @param camera
 	 * @param previewW
 	 *            建议640
@@ -127,9 +124,8 @@ final class CameraConfigurationManager {
 
 	/**
 	 * 
-	 * getOptimalPreviewSize:获取最接近预览分辨率 <br/>
+	 * getOptimalPreviewSize:获取最接近预览分辨率
 	 * 
-	 * @author:284891377 Date: 2016年7月11日 下午2:51:06
 	 * @param localList
 	 * @param w
 	 * @param h

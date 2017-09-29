@@ -50,10 +50,7 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
   Context context;
 
   /**
-   * setReqPrevWH:设置希望的预览分辨率. <br/>
-   *
-   * @author:284891377 Date: 2016/10/25 0025 10:50
-   * @since JDK 1.7
+   * setReqPrevWH:设置希望的预览分辨率.
    */
   public void setReqPrevWH(int reqPrevW, int reqPrevH) {
     this.reqPrevW = reqPrevW;
@@ -190,20 +187,21 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
   }
 
   @Override public void onPreviewFrame(byte[] data, Camera camera) {
+    switch (caremaId){
 
-    if (caremaId == Camera.CameraInfo.CAMERA_FACING_FRONT) {// 前置
-      if (Configuration.ORIENTATION_PORTRAIT == orientation) {// 竖屏
-        // 水平镜像+旋转90
+      case Camera.CameraInfo.CAMERA_FACING_FRONT://前置摄像头
+        if (Configuration.ORIENTATION_PORTRAIT == orientation){//竖屏
 
-      }
-    } else {//后置
-      if (Configuration.ORIENTATION_PORTRAIT == orientation) {// 竖屏 旋转90
+        }
+        break;
+      case Camera.CameraInfo.CAMERA_FACING_BACK://后置摄像头
+        if (Configuration.ORIENTATION_PORTRAIT == orientation){
 
-      } else {
-        // 横屏不做处理
-
-      }
+        }
+        break;
+      default:break;
     }
+
   }
 
   /**
