@@ -7,8 +7,10 @@ import android.hardware.Camera;
 import android.hardware.Camera.PreviewCallback;
 import android.hardware.Camera.Size;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
+import android.widget.Toast;
 
 /**
  * 实时预览帧 setPreviewCallback
@@ -119,6 +121,7 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
         mCamera.startPreview();
         mCamera.setPreviewCallback(CameraPreview.this);
       } catch (Exception e) {
+        //Toast.makeText(context, "不支持的数据格式", Toast.LENGTH_SHORT).show();
         e.printStackTrace();
       }
     }
@@ -187,6 +190,7 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
   }
 
   @Override public void onPreviewFrame(byte[] data, Camera camera) {
+    Log.e(TAG, "onPreviewFrame: " + data.toString());
     switch (caremaId){
 
       case Camera.CameraInfo.CAMERA_FACING_FRONT://前置摄像头
