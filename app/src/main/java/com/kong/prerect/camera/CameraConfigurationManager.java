@@ -24,6 +24,9 @@ import android.view.Display;
 import android.view.Surface;
 import android.view.WindowManager;
 
+/**
+ * 摄像头配置管理
+ */
 final class CameraConfigurationManager {
 	private static final int TEN_DESIRED_ZOOM = 27;
 	private static final Pattern COMMA_PATTERN = Pattern.compile(",");
