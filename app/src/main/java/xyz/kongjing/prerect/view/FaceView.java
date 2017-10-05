@@ -1,4 +1,4 @@
-package com.kong.prerect.view;
+package xyz.kongjing.prerect.view;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -7,13 +7,12 @@ import android.graphics.Paint;
 import android.util.AttributeSet;
 import android.view.View;
 
-import com.kong.prerect.model.FaceInfo;
-
+import xyz.kongjing.prerect.model.FaceInfo;
 
 /**
  * Created by Jing on 16/8/5.
  */
-public class FaceRectView extends View {
+public class FaceView extends View {
 
     Context mContext;
     private Paint mLinePaint;
@@ -22,7 +21,7 @@ public class FaceRectView extends View {
     int surfaceW, surfaceH;
     int frameWidth = 480, frameHight = 640;
     float scale;
-    public FaceRectView(Context context, AttributeSet attrs) {
+    public FaceView(Context context, AttributeSet attrs) {
         super(context, attrs);
         this.mContext = context;
         this.initPaint();

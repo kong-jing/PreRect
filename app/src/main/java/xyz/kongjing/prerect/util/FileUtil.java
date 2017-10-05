@@ -1,4 +1,4 @@
-package com.kong.prerect.util;
+package xyz.kongjing.prerect.util;
 
 import java.io.BufferedOutputStream;
 import java.io.File;

@@ -1,4 +1,4 @@
-package com.kong.prerect.util;
+package xyz.kongjing.prerect.util;
 
 import android.hardware.Camera;
 import android.os.Build;

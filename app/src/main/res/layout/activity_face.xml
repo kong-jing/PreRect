@@ -3,13 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.kong.prerect.activity.FaceActivity">
-    <com.kong.prerect.camera.CameraPreview
+    tools:context="xyz.kongjing.prerect.activity.FaceActivity">
+    <xyz.kongjing.prerect.camera.CameraPreview
         android:id="@+id/preview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         />
-    <com.kong.prerect.view.FaceRectView
+    <xyz.kongjing.prerect.view.FaceView
         android:id="@+id/faceview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

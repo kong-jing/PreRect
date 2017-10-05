@@ -1,4 +1,4 @@
-package com.kong.prerect.camera;
+package xyz.kongjing.prerect.camera;
 
 import android.content.Context;
 import android.content.pm.PackageManager;
@@ -10,7 +10,6 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
-import android.widget.Toast;
 
 /**
  * 实时预览帧 setPreviewCallback

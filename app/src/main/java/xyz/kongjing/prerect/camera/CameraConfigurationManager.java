@@ -1,7 +1,7 @@
-package com.kong.prerect.camera;
+package xyz.kongjing.prerect.camera;
 
 import android.util.Log;
-import com.kong.prerect.callback.OnCaptureCallback;
+import xyz.kongjing.prerect.callback.OnCaptureCallback;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;

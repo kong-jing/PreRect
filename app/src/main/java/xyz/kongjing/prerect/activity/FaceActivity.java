@@ -1,4 +1,4 @@
-package com.kong.prerect.activity;
+package xyz.kongjing.prerect.activity;
 
 import android.content.res.Configuration;
 import android.hardware.Camera;
@@ -7,12 +7,12 @@ import android.os.Bundle;
 
 import android.util.DisplayMetrics;
 import android.widget.RelativeLayout;
-import com.kong.camerapreview.R;
-import com.kong.prerect.camera.CameraPreview;
-import com.kong.prerect.util.CameraUtil;
-import com.kong.prerect.util.DisplayUtil;
-import com.kong.prerect.util.Util;
-import com.kong.prerect.view.FaceRectView;
+import xyz.kongjing.camerapreview.R;
+import xyz.kongjing.prerect.camera.CameraPreview;
+import xyz.kongjing.prerect.util.CameraUtil;
+import xyz.kongjing.prerect.util.DisplayUtil;
+import xyz.kongjing.prerect.util.Util;
+import xyz.kongjing.prerect.view.FaceView;
 
 /**
  * 人脸检测的预览界面
@@ -20,14 +20,14 @@ import com.kong.prerect.view.FaceRectView;
 public class FaceActivity extends AppCompatActivity {
     public static  FaceActivity faceActivity;
     CameraPreview mCameraPreview;
-    FaceRectView mFaceView;
+    FaceView mFaceView;
     int orientation = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_face);
         mCameraPreview = (CameraPreview) findViewById(R.id.preview);
-        mFaceView = (FaceRectView) findViewById(R.id.faceview);
+        mFaceView = (FaceView) findViewById(R.id.faceview);
         orientation = this.getResources().getConfiguration().orientation;
         initView();
         faceActivity = this;
