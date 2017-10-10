@@ -21,3 +21,49 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+//添加公共配置
+ext {
+    signingConfig = [
+        storePassword: "",
+        keyAlias     : "",
+        keyPassword  : ""
+    ]
+
+    android = [
+        compileSdkVersion: 25,
+        buildToolsVersion: "25.0.0",
+        minSdkVersion    : 14,
+        targetSdkVersion : 22,
+        //版本格式0.0.0.000
+        versionCode      : 1,
+        versionName      : "1.1",
+    ]
+
+    depsVersion = [
+        support: "25.3.1"
+    ]
+
+
+    dependencies = [
+        // ------------- Android -------------
+        supportV4            : "com.android.support:support-v4:${depsVersion.support}",
+        appcompatV7          : "com.android.support:appcompat-v7:${depsVersion.support}",
+        design               : "com.android.support:design:${depsVersion.support}",
+        cardview             : "com.android.support:cardview-v7:${depsVersion.support}",
+        recyclerview         : "com.android.support:recyclerview-v7:${depsVersion.support}",
+
+        // ------------- RxAndroid -------------
+        rxAndroid : 'io.reactivex:rxandroid:1.2.1',
+        rxJava    : 'io.reactivex:rxjava:1.1.6',
+
+        // ------------- LeakCanary -------------
+        leakcanaryAndroid    : 'com.squareup.leakcanary:leakcanary-android:1.5',
+        leakcanaryAndroidNoOp: 'com.squareup.leakcanary:leakcanary-android-no-op:1.5',
+
+        // ------------- Test dependencies -------------
+        junit                : 'junit:junit:4.12',
+        truth                : 'com.google.truth:truth:0.29',
+        robolectric          : 'org.robolectric:robolectric:3.1.2'
+    ]
+}

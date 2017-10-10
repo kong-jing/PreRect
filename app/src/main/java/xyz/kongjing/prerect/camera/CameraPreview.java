@@ -120,7 +120,6 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
         mCamera.startPreview();
         mCamera.setPreviewCallback(CameraPreview.this);
       } catch (Exception e) {
-        //Toast.makeText(context, "不支持的数据格式", Toast.LENGTH_SHORT).show();
         e.printStackTrace();
       }
     }
@@ -156,7 +155,7 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
   }
 
   /******************************************************************/
-  public Size getPreviewSize() {
+  public Size setPreviewSize() {
     Camera.Parameters parameters = mCamera.getParameters();
     return parameters.getPreviewSize();
   }
