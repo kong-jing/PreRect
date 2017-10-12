@@ -21,6 +21,7 @@ You need to override the other 2 constructors of View in CustomView:
     sudo chmod 666 ××× （每个人都有读和写的权限）
     sudo chmod 777 ××× （每个人都有读和写以及执行的权限）
 
+### 使用的shell来控制摄像头节点
 
 ```adb shell```
 
@@ -32,7 +33,9 @@ You need to override the other 2 constructors of View in CustomView:
 
 ```chmod 777 video1```
 
+### TODO 
 
+添加摄像头输出分辨率设置
 
 
 
