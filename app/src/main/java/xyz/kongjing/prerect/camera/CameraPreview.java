@@ -3,13 +3,18 @@ package xyz.kongjing.prerect.camera;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.content.res.Configuration;
+import android.graphics.Bitmap;
 import android.hardware.Camera;
 import android.hardware.Camera.PreviewCallback;
 import android.hardware.Camera.Size;
+import android.nfc.Tag;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
+import xyz.kongjing.prerect.callback.PreDataCallBack;
+import xyz.kongjing.prerect.util.BaseThreadPoolUtil;
+import xyz.kongjing.prerect.util.ImgUtil;
 
 /**
  * 实时预览帧 setPreviewCallback
@@ -20,11 +25,15 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
   private static final String TAG = "CameraPreview";
 
   private Camera mCamera;
+  PreDataCallBack preDataCallBack;//回调数据到活动界面
   CameraConfigurationManager mCameraConfigurationManager;//配置摄像头
 
   private int orientation;
   int imageAngle;
 
+  public void setPreDataCallBack(PreDataCallBack preDataCallBack){
+    this.preDataCallBack = preDataCallBack;
+  }
   /**
    * 设置屏幕方向
    *
@@ -187,8 +196,8 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
     }
   }
 
-  @Override public void onPreviewFrame(byte[] data, Camera camera) {
-    Log.e(TAG, "onPreviewFrame: " + data.toString());
+  @Override public void onPreviewFrame(final byte[] data, final Camera camera) {
+    preDataCallBack.onPreviewFrame(data, camera);
     switch (caremaId){
 
       case Camera.CameraInfo.CAMERA_FACING_FRONT://前置摄像头

@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import xyz.kongjing.camerapreview.R;
+import xyz.kongjing.prerect.R;
 
 public class MainActivity extends AppCompatActivity {
     private Button btn_preview,btn_detect;
