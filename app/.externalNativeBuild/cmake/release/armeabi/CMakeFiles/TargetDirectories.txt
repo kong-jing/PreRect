@@ -1,0 +1,3 @@
+/Users/Jing/Android/PreRect/app/.externalNativeBuild/cmake/release/armeabi/CMakeFiles/edit_cache.dir
+/Users/Jing/Android/PreRect/app/.externalNativeBuild/cmake/release/armeabi/CMakeFiles/rebuild_cache.dir
+/Users/Jing/Android/PreRect/app/.externalNativeBuild/cmake/release/armeabi/CMakeFiles/imagelib.dir

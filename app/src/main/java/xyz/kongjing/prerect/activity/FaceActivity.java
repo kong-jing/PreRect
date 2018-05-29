@@ -14,6 +14,7 @@ import android.widget.RelativeLayout;
 import xyz.kongjing.prerect.R;
 import xyz.kongjing.prerect.callback.PreDataCallBack;
 import xyz.kongjing.prerect.camera.CameraPreview;
+import xyz.kongjing.prerect.ndk.ImageUtilEngine;
 import xyz.kongjing.prerect.util.CameraUtil;
 import xyz.kongjing.prerect.util.DisplayUtil;
 import xyz.kongjing.prerect.util.ImgUtil;
@@ -105,7 +106,9 @@ public class FaceActivity extends AppCompatActivity implements PreDataCallBack{
         ++count;
         Log.w(TAG, "onPreviewFrame: " + data + ", " + count);
         if (data != null && camera != null) {
-            bitmap = ImgUtil.runInPreviewFrame(data, camera);
+            int[] agb = ImageUtilEngine.decodeYUV420SP(data, 640, 480);
+            bitmap = Bitmap.createBitmap(agb, 640, 480, Bitmap.Config.ARGB_8888);
+            //bitmap = ImgUtil.runInPreviewFrame(data, camera);
             Log.e(TAG, "run: " + bitmap);
         }
 

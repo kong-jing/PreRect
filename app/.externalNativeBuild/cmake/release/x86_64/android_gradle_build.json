@@ -1,0 +1,38 @@
+
+{
+	"buildFiles" : [ "/Users/Jing/Android/PreRect/app/src/main/cpp/CMakeLists.txt" ],
+	"cFileExtensions" : [ "c" ],
+	"cleanCommands" : 
+	[
+		"/Users/Jing/Library/Android/sdk/cmake/3.6.3155560/bin/cmake --build /Users/Jing/Android/PreRect/app/.externalNativeBuild/cmake/release/x86_64 --target clean"
+	],
+	"libraries" : 
+	{
+		"imagelib-Release-x86_64" : 
+		{
+			"abi" : "x86_64",
+			"artifactName" : "imagelib",
+			"buildCommand" : "/Users/Jing/Library/Android/sdk/cmake/3.6.3155560/bin/cmake --build /Users/Jing/Android/PreRect/app/.externalNativeBuild/cmake/release/x86_64 --target imagelib",
+			"buildType" : "release",
+			"files" : 
+			[
+				
+				{
+					"flags" : "  --target=x86_64-none-linux-android --gcc-toolchain=/Users/Jing/Library/Android/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/darwin-x86_64 --sysroot=/Users/Jing/Library/Android/sdk/ndk-bundle/sysroot -Dimagelib_EXPORTS  -isystem /Users/Jing/Library/Android/sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC      -c ",
+					"src" : "/Users/Jing/Android/PreRect/app/src/main/cpp/Yuv2Rgb.c",
+					"workingDirectory" : "/Users/Jing/Android/PreRect/app/.externalNativeBuild/cmake/release/x86_64"
+				}
+			],
+			"output" : "/Users/Jing/Android/PreRect/app/build/intermediates/cmake/release/obj/x86_64/libimagelib.so",
+			"toolchain" : "4492874564172706855"
+		}
+	},
+	"toolchains" : 
+	{
+		"4492874564172706855" : 
+		{
+			"cCompilerExecutable" : "/Users/Jing/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang",
+			"cppCompilerExecutable" : "/Users/Jing/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++"
+		}
+	}
+}
