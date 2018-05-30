@@ -33,6 +33,11 @@ public class FaceActivity extends AppCompatActivity implements PreDataCallBack{
     int count = 0;
     Activity act;
 
+    Bitmap bitmap;
+    byte[] data;
+    Camera camera;
+    boolean is;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -96,10 +101,11 @@ public class FaceActivity extends AppCompatActivity implements PreDataCallBack{
         mCameraPreview.StopCamera();
     }
 
-    Bitmap bitmap;
-    byte[] data;
-    Camera camera;
-    boolean is;
+    /**
+     * data from camera
+     * @param data
+     * @param camera
+     */
     @Override public void onPreviewFrame(final byte[] data, final Camera camera) {
         this.data = data;
         this.camera = camera;

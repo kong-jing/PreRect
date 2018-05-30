@@ -16,6 +16,9 @@ android {
                 cppFlags "-frtti -fexceptions"
             }
         }
+        ndk{
+            abiFilter 'armeabi-v7a'
+        }
     }
 
     externalNativeBuild {
@@ -31,7 +34,16 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
 }
+
+
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
